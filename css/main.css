@@ -1,0 +1,304 @@
+html {
+    background-color: #211F20;
+}
+
+body {
+    font-family: 'Dazzed', Helvetica, Verdana, sans-serif;
+    margin: 0;
+    color: #F7F3E8;
+    font-size: 1.25rem;
+}
+
+h1 {
+    font-size: 8rem;
+    font-weight: lighter;
+    margin-bottom: 0;
+}
+
+@media only screen and (max-width: 414px) {
+    h1 {
+        font-size: 6rem;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    h1 {
+        font-size: 4rem;
+    }
+}
+
+h2 {
+    font-family: 'Reckless';
+    font-weight: lighter;
+    font-size: 3rem;
+    margin-bottom: 0;
+    max-width: 65rem;
+}
+
+h3 {
+    font-size: 2.5rem;
+    font-weight: medium;
+    margin-bottom: 0;
+}
+
+h4 {
+    font-family: 'Reckless Neue';
+    font-size: 2rem;
+    font-weight: medium;
+    margin-top: 0.2rem;
+    letter-spacing: 0.03em;
+    margin-bottom: 0;
+}
+
+
+p {
+    font-size: 1.2rem;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    margin-bottom: 0;
+    margin-top: 0.7rem;
+}
+
+
+img,
+video {
+    max-width: 100%;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* masonry */
+
+.gap {
+    height: 14rem;
+}
+
+@media only screen and (max-width: 1024px) {
+    .gap {
+        height: 7rem;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .gap {
+        height: 0rem;
+    }
+}
+
+.project-card>p {
+    font-size: 1rem;
+    opacity: 70%;
+}
+
+.masonry {
+    column-gap: 1rem;
+    column-fill: initial;
+}
+
+.masonry .project-card {
+    margin-bottom: 1rem;
+    display: inline-block;
+    /* Fix the misalignment of items */
+    /* vertical-align: top; */
+    /* Keep the item on the very top */
+    margin-bottom: 3rem;
+}
+
+@media only screen and (max-width: 414px) {
+    .masonry .project-card {
+        margin-bottom: 5rem;
+    }
+}
+
+.masonry .project-card img {
+    transition: all .5s ease-in-out;
+    backface-visibility: hidden;
+    /* Remove Image flickering on hover */
+}
+
+.masonry .project-card:hover img {
+    opacity: .75;
+}
+
+/* Masonry on tablets */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .masonry {
+        column-count: 2;
+    }
+}
+
+/* Masonry on big screens */
+@media only screen and (min-width: 1024px) {
+    .masonry {
+        column-count: 2;
+    }
+}
+
+
+
+
+/* general wrapper */
+
+.wrapper {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+@media only screen and (max-width: 60em) {
+    .wrapper {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+}
+
+
+/* Big introdiction display */
+
+.big-intro {
+    margin-top: 26rem;
+    margin-bottom: 6rem;
+}
+
+@media only screen and (max-width: 414px) {
+    .big-intro {
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+    }
+}
+
+
+
+
+
+/* layouts */
+
+/* container of layout */
+.layout {
+    display: flex;
+    flex-direction: column;
+
+    /* 100 content width with gutter */
+    max-width: 104em;
+    margin-bottom: 3rem;
+
+}
+
+.layout--no-margin-bottom {
+    margin-bottom: 0rem !important;
+}
+
+
+.layout__col-s:last-child,
+.layout__col-m:last-child,
+.layout__col-l:last-child,
+.layout__col-side-bar:last-child {
+    margin-right: 0em;
+}
+
+/* single colum layout when screen is small */
+
+.layout__col-s,
+.layout__col-m,
+.layout__col-l,
+.layout__col-side-bar {
+    /* define the basic column width unit for the website */
+
+    /* 330px -> 20.xxx em */
+    /* define the basic gutter size for the webist */
+    margin-bottom: 1em;
+}
+
+.layout__col-s:last-child,
+.layout__col-m:last-child,
+.layout__col-l:last-child,
+.layout__col-side-bar:last-child {
+    /* only introduce the gutter for the middle row, not last one */
+    margin-right: 0em;
+}
+
+/* hide the side bar when the window is too small */
+.layout__col-side-bar {
+    display: none;
+}
+
+/* for center floating elements */
+.responsive-container {
+    margin: 0rem 1rem;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+
+/* expend layout when screen is bigger */
+@media only screen and (min-width: 60em) {
+
+    .layout {
+        display: flex;
+        flex-direction: row;
+
+        /* 100 content width with gutter */
+        max-width: 104em;
+    }
+
+    .layout__col-s,
+    .layout__col-m,
+    .layout__col-l,
+    .layout__col-side-bar {
+
+        /* 330px -> 20.xxx em */
+        /* define the basic gutter size for the webist */
+        margin-right: 1em;
+    }
+
+    .layout__col-s:last-child,
+    .layout__col-m:last-child,
+    .layout__col-l:last-child,
+    .layout__col-side-bar:last-child {
+        /* only introduce the gutter for the middle columns, not last one */
+        margin-right: 0em;
+    }
+
+    .layout__col-s {
+        display: block;
+        flex-grow: 1;
+
+        /* define the basic column width unit for the website */
+        flex-basis: 20em;
+    }
+
+    .layout__col-m {
+        display: block;
+        flex-grow: 1;
+
+        /* notice that this is two times the size of layout  */
+        flex-basis: 40em;
+    }
+
+    .layout__col-l {
+        display: block;
+        flex-grow: 1;
+        flex-basis: 60em;
+    }
+
+    .layout__col-side-bar {
+        /* have a consistant sidebar size */
+        display: block;
+        flex-shrink: 0;
+        flex-grow: 0;
+        flex-basis: 20em;
+    }
+
+}
+
+@media only screen and (min-width: 1280px) {
+    .responsive-container {
+        max-width: 1200px;
+        margin: 0em auto;
+    }
+}
