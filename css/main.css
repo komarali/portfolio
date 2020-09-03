@@ -19,7 +19,7 @@ h1 {
 
 @media only screen and (max-width: 414px) {
     h1 {
-        font-size: 6rem;
+        font-size: 5rem;
     }
 }
 
@@ -57,7 +57,7 @@ h4 {
 p,
 ol,
 ul {
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 150%;
     letter-spacing: 0.02em;
     margin-bottom: 0.4rem;
@@ -383,12 +383,29 @@ footer>p {
 /* Project description */
 
 .project-description {
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+    width: 55%;
     grid-gap: 0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    /* grid-template-rows: 1fr ; */
+    grid-template-rows: 1fr 1fr;
     grid-template-areas:
-        "team role tools project-format";
+        "team role tools project-format"
+        "team-body role-body tools-body project-format-body"
+    ;
+
+}
+
+.description-item-header {
+    border-bottom: solid 1px #F7F3E8;
+    height: fit-content;
+    padding-bottom: 1rem;
+}
+
+.description-item {
+    height: fit-content;
+    padding-top: 0.5rem;
 }
 
 
@@ -396,14 +413,60 @@ footer>p {
     grid-area: team;
 }
 
+#team-body {
+    grid-area: team-body;
+}
+
 #role {
     grid-area: role;
+}
+
+#role-body {
+    grid-area: role-body;
 }
 
 #tools {
     grid-area: tools;
 }
 
+#tools-body {
+    grid-area: tools-body;
+}
+
 #project-format {
     grid-area: project-format;
+}
+
+#project-format-body {
+    grid-area: project-format-body;
+}
+
+@media only screen and (max-width: 540px) {
+    .project-description {
+        width: 100%;
+        margin-top: 5rem;
+        margin-bottom: 2rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas:
+            "team role"
+            "team-body role-body"
+            "tools project-format"
+            "tools-body project-format-body"
+        ;
+    }
+
+    .description-item-header {
+        border-bottom: solid 1px #F7F3E8;
+        height: fit-content;
+        padding-bottom: 0.6rem;
+        width: fit-content;
+        padding-top: 1rem;
+    }
+
+    .description-item {
+        width: max-content;
+        height: fit-content;
+        padding-top: 0rem;
+    }
 }
