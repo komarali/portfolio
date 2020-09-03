@@ -5,6 +5,7 @@ html {
 body {
     font-family: 'Dazzed', Helvetica, Verdana, sans-serif;
     margin: 0;
+    padding: 0;
     font-weight: normal;
     color: #F7F3E8;
     font-size: 1.25rem;
@@ -41,7 +42,7 @@ h2 {
 h3 {
     font-size: 2.5rem;
     font-weight: medium;
-    margin-bottom: 0;
+    margin-bottom: 2rem;
 }
 
 h4 {
@@ -53,16 +54,44 @@ h4 {
     margin-bottom: 0;
 }
 
+.subtitle {
+    margin-top: 3.5rem;
+    font-size: 1.8rem;
+}
 
 p,
 ol,
 ul {
     font-size: 1rem;
-    line-height: 150%;
+    line-height: 160%;
     letter-spacing: 0.02em;
     margin-bottom: 0.4rem;
     margin-top: 0.7rem;
+    max-width: 40rem;
 }
+
+.paragraph {
+    opacity: 80%;
+    font-weight: lighter;
+    margin-top: 1rem;
+}
+
+blockquote {
+    font-family: 'Reckless';
+    font-weight: medium;
+    font-size: 1.2rem;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    margin: 2rem 0;
+    height: fit-content;
+}
+
+hr {
+    border: solid 1px #F7F3E8;
+    width: 3rem;
+    margin: 0.7rem 0;
+}
+
 
 /* list with no bullet points or numbers */
 .hidden-list {
@@ -184,6 +213,7 @@ video {
 
 .project-card:hover img {
     transform: scale(1.06);
+
 
 }
 
@@ -384,7 +414,7 @@ footer>p {
 
 .project-description {
     margin-top: 6rem;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
     width: 55%;
     grid-gap: 0;
     display: grid;
@@ -469,4 +499,26 @@ footer>p {
         height: fit-content;
         padding-top: 0rem;
     }
+}
+
+
+
+/* two column grid */
+
+.two-column-grid {
+    margin-top: 8rem;
+    margin-bottom: 3rem;
+    grid-gap: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+        "two-column-item1 two-column-item2"
+}
+
+.two-column-item1 {
+    grid-area: two-column-item1;
+}
+
+.two-column-item2 {
+    grid-area: two-column-item2;
 }
