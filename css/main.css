@@ -155,7 +155,7 @@ video {
 /* INDEX PAGE LAYOUT */
 
 .grid-container {
-    grid-gap: 1rem;
+    grid-gap: 1.7rem;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(7, 1fr);
@@ -177,6 +177,16 @@ video {
 
 }
 
+
+.project-card img {
+    transition: transform .2s ease-in-out;
+}
+
+.project-card:hover img {
+    transform: scale(1.03);
+
+}
+
 #project0 {
     grid-area: project0;
     height: auto;
@@ -188,26 +198,51 @@ video {
     grid-area: project1;
 }
 
+#project1:hover {
+    color: #42A46B;
+}
+
+
+
 #project2 {
     grid-area: project2;
+}
+
+#project2:hover {
+    color: #932D88;
 }
 
 #project3 {
     grid-area: project3;
 }
 
+#project3:hover {
+    color: #FCD444;
+}
+
 #project4 {
     grid-area: project4;
+}
+
+#project4:hover {
+    color: #0E3FD6;
 }
 
 #project5 {
     grid-area: project5;
 }
 
+#project5:hover {
+    color: #E6401B;
+}
+
 #project6 {
     grid-area: project6;
 }
 
+#project6:hover {
+    color: #FAA8CD;
+}
 
 
 @media only screen and (max-width: 550px) {
