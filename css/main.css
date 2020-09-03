@@ -46,7 +46,7 @@ h3 {
 
 h4 {
     font-family: 'Reckless';
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: medium;
     margin-top: 0.2rem;
     letter-spacing: 0.03em;
@@ -374,4 +374,36 @@ footer>p {
     opacity: 50%;
     padding-top: 7rem;
     padding-bottom: 2rem;
+}
+
+
+
+/* PROJECT LAYOUT COMPONENTS BELOW */
+
+/* Project description */
+
+.project-description {
+    grid-gap: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-rows: 1fr ; */
+    grid-template-areas:
+        "team role tools project-format";
+}
+
+
+#team {
+    grid-area: team;
+}
+
+#role {
+    grid-area: role;
+}
+
+#tools {
+    grid-area: tools;
+}
+
+#project-format {
+    grid-area: project-format;
 }
