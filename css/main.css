@@ -43,6 +43,7 @@ h3 {
     font-size: 2.5rem;
     font-weight: medium;
     margin-bottom: 2rem;
+    margin-top: 0;
 }
 
 h4 {
@@ -521,4 +522,18 @@ footer>p {
 
 .two-column-item2 {
     grid-area: two-column-item2;
+}
+
+
+@media screen and (max-width: 550px) {
+    .two-column-grid {
+        margin-top: 6rem;
+        margin-bottom: 2rem;
+        grid-gap: 0.5rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "two-column-item1"
+            " two-column-item2"
+    }
 }
