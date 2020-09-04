@@ -55,10 +55,24 @@ h4 {
     margin-bottom: 0;
 }
 
+
+h5 {
+    text-transform: uppercase;
+    font-weight: medium;
+    font-size: 0.5rem;
+    opacity: 60%;
+    letter-spacing: 0.05rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.3rem;
+}
+
+
 .subtitle {
     margin-top: 3.5rem;
     font-size: 1.8rem;
 }
+
+
 
 p,
 ol,
@@ -413,10 +427,9 @@ nav {
 /* footer */
 
 footer>p {
-    text-align: center;
     font-size: 0.8rem;
     opacity: 50%;
-    padding-top: 7rem;
+    padding-top: 2rem;
     padding-bottom: 2rem;
 }
 
@@ -567,4 +580,121 @@ footer>p {
         height: auto;
         margin-left: 2%;
     }
+}
+
+
+
+
+/* More design goodies, projects lineup layout */
+
+.footer-projects {
+    margin-top: 7rem;
+}
+
+.projects-lineup {
+    grid-gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas:
+        "button1 button2 button3 button4 button5 button6"
+}
+
+.buttons:hover>h5 {
+    opacity: 1 !important;
+}
+
+#button1 {
+    grid-area: button1;
+    border: solid 1px #F7F3E8;
+    padding: 0.7rem 3rem;
+    border-radius: 3rem;
+}
+
+#button2 {
+    grid-area: button2;
+    border: solid 1px #F7F3E8;
+    padding: 0.7rem 3rem;
+
+}
+
+#button3 {
+    grid-area: button3;
+    border: solid 1px #F7F3E8;
+    padding: 0.7rem 3rem;
+    border-radius: 3rem 0;
+
+}
+
+#button4 {
+    grid-area: button4;
+    border: solid 1px #F7F3E8;
+    padding: 0.7rem 3rem;
+    border-radius: 0 3rem 3rem 0;
+
+}
+
+#button5 {
+    grid-area: button5;
+    border: solid 1px #F7F3E8;
+    padding: 0.7rem 3rem;
+    border-radius: 3rem;
+
+}
+
+#button6 {
+    grid-area: button6;
+    border: solid 1px #F7F3E8;
+    padding: 0.7rem 3rem;
+
+}
+
+#button1:hover {
+    background-color: #42A46B;
+    border: none;
+}
+
+
+
+#button2:hover {
+    background-color: #932D88;
+    border: none;
+}
+
+
+
+#button3:hover {
+    background-color: #FCD444;
+    border: none;
+    color: #211F20;
+
+}
+
+
+#button4:hover {
+    background-color: #0E3FD6;
+    border: none;
+
+}
+
+
+
+#button5:hover {
+    background-color: #E6401B;
+    border: none;
+
+}
+
+
+
+#button6:hover {
+    background-color: #FAA8CD;
+    border: none;
+    color: #211F20;
+
+
+}
+
+.button-text {
+    font-size: 1.1rem;
+    margin: 0;
 }
