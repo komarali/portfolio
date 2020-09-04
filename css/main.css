@@ -72,6 +72,12 @@ h5 {
     font-size: 1.8rem;
 }
 
+@media only screen and (max-width: 414px) {
+    .subtitle {
+        margin-top: 1rem
+    }
+}
+
 
 
 p,
@@ -553,7 +559,7 @@ footer>p {
 
 @media screen and (max-width: 550px) {
     .two-column-grid {
-        margin-top: 6rem;
+        margin-top: 1rem;
         margin-bottom: 2rem;
         grid-gap: 0.5rem;
         display: grid;
@@ -622,7 +628,7 @@ footer>p {
     }
 
     .footer-projects {
-        margin-top: 3rem;
+        margin-top: 5rem;
     }
 
     .button-text {
@@ -725,4 +731,38 @@ footer>p {
 .button-text {
     font-size: 1.1rem;
     margin: 0;
+}
+
+
+
+
+/* asymmetric images layout */
+
+.asymmetric-images {
+    grid-gap: 1rem;
+    display: grid;
+    margin-top: 6rem;
+    height: auto;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas:
+        "M-img M-img M-img M-img S-img S-img"
+}
+
+.m-img {
+    grid-area: M-img;
+}
+
+.s-img {
+    grid-area: S-img;
+}
+
+@media screen and (max-width: 550px) {
+    .asymmetric-images {
+        margin-top: 3rem;
+        height: auto;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "M-img"
+            "S-img"
+    }
 }
