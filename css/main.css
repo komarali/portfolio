@@ -129,6 +129,7 @@ video {
 
 
 
+
 /* typed text */
 .typedtext-style {
     font-size: 8rem;
@@ -535,5 +536,23 @@ footer>p {
         grid-template-areas:
             "two-column-item1"
             " two-column-item2"
+    }
+}
+
+
+
+/* bleeding image */
+
+.bleeding-image {
+    width: 85%;
+    height: auto;
+    margin-left: 15%;
+}
+
+@media screen and (max-width: 414px) {
+    .bleeding-image {
+        width: 98%;
+        height: auto;
+        margin-left: 2%;
     }
 }
