@@ -36,7 +36,7 @@ h2 {
     font-weight: lighter;
     font-size: 3rem;
     margin-bottom: 0;
-    max-width: 65rem;
+    max-width: 70rem;
     line-height: 120%;
 }
 
@@ -242,16 +242,15 @@ video {
 }
 
 
-.project-card img {
+/* .project-card img {
     transition: transform .2s ease-in-out;
 }
 
 .project-card:hover img {
-    transform: scale(1.06);
-
-
+    transform: scale(1.05);
 }
 
+*/
 #project0 {
     grid-area: project0;
     height: auto;
@@ -262,6 +261,7 @@ video {
 #project1 {
     grid-area: project1;
 }
+
 
 #project1:hover {
     color: #42A46B;
@@ -306,7 +306,7 @@ video {
 }
 
 #project6:hover {
-    color: #FAA8CD;
+    color: #42A46B;
 }
 
 
