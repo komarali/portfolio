@@ -260,6 +260,7 @@ video {
 
 #project1 {
     grid-area: project1;
+
 }
 
 
@@ -306,7 +307,7 @@ video {
 }
 
 #project6:hover {
-    color: #42A46B;
+    color: #FAA8CD;
 }
 
 
